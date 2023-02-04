@@ -1,82 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Smokum">
-    <script src="app.js" charset="utf-8"></script>
-<style>
-body {
-  font-family: "Smokum", sans-serif;
-  font-size: 25pt
-}
-
-body {
-    background-color: tan ;
-    text-align: center;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marina's Amazing Snake Game</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Smokum">
+  <script src="app.js" charset="utf-8"></script>
 </head>
-<title>Marina's snake Game</title>
 <body>
-Welcome to the Wild West
-<!-- TEXT ABOVE, OBJECTS BELOW -->
 
-<!-- Download Images from this link- https://bit.ly/2QEq5p2 -->
 <div class="container">
-    <div class="heading">
-      <p>
-        You're the Sheriff: <br />
-        protect the townsfolk from snakes!
-      </p>
+  <div class="heading">
+    <p>
+      You're the new Sheriff<br />
+      Protect the townsfolk from snakes!
+    </p>
+  </div>
+  <div class="score">Points: <span>0</span></div>
+  <div class="holesCont">
+    <div class="hole hole1">
+      <img src ="./snake.png" class="mole"/>
+      
     </div>
-    <div class="score">Points: <span>0</span></div>
-    <div class="holesCont">
-      <div class="hole hole1">
-        <img class="snake" src="./snake.png" alt="" width="100" 
-        height="120"> <img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole2">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole3">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <!-- <div class="hole hole4">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole5"><img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60"></div>
-      <div class="hole hole6">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole7">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole8">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div>
-      <div class="hole hole9">
-        <img class="snake" img src="./snake.png" alt="" width="100" 
-        height="120"><img class="hole" src="./blackhole.png" width="100" height="60">
-      </div> -->
+    <div class="hole hole2">
+      
     </div>
-    <div class="buttons">
-      <button class="play">PLAY</button>
-      <button class="stop">STOP</button>
+    <div class="hole hole3">
+      
     </div>
-    <div class="cursor">
-      <img class="cursor" img src="./revolver.png"/>
-        </div>
-    </div>
+    
+<!--   divs below must have black hole png images with classes "hole" and additional snake img with class assignment "mole"   -->
+    <div class="hole hole4"></div>
+    <div class="hole hole5"></div>
+    <div class="hole hole6"></div>
+    <div class="hole hole7"></div>
+    <div class="hole hole8"></div>
+    <div class="hole hole9"></div>
+  </div>
+  <div class="buttons">
+    <button class="play">PLAY</button>
+    <button class="stop">STOP</button>
+  </div>
+  <div class="cursor">
+    <img src="https://i.postimg.cc/kgyCZgSs/revolver-removebg-preview-1.png" />
+  </div>
+</div>
+
+<!-- https://www.youtube.com/watch?v=D9ZfzXaCPuI -->
+<!-- https://www.youtube.com/watch?v=b20YueeXwZg -->
+
+<!-- ANIMATION AND TIMING TUTORIALS -->
+
 </body>
 </html>

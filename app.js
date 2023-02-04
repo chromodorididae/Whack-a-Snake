@@ -8,6 +8,8 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
 
+//   ADJUST CURSOR.STYLE.ANIMATION BELOW - 0.1S EASE CURRENTLY
+  
   window.addEventListener("click", () => {
     cursor.style.animation = "hit 0.1s ease";
     setTimeout(() => {
@@ -16,6 +18,9 @@ window.addEventListener("mousemove", (e) => {
   });
 });
 
+
+//STOP BTN NOT WORKING? ADD
+
 playBtn.addEventListener("click", () => {
   playBtn.style.display = "none";
   stopBtn.style.display = "inline-block";
@@ -23,20 +28,24 @@ playBtn.addEventListener("click", () => {
   let hole;
   let points = 0;
 
-  const startGame = setInterval(() => {
+  const 
+  Game = setInterval(() => {
     let arrayNo = Math.floor(Math.random() * 9);
     hole = holes[arrayNo];
-    // UPDATE IMAGE - DROPBOX LINK BROKEN
+
     let image = document.createElement("img");
-    image.setAttribute("src", "https://previews.dropbox.com/p/thumb/AA8m-hEZXJI_bVZ712hEmOsO0lr1Q-0YPNVQdM1bSv76OP1cyZs-T0VeigdLEezp7pjNl9jSdmUQhVoZdC_tkGvsP0QRH2Ru-IctZj_3O-URgAFasZqHeiLAQbHykAYYWEIIuYtecoLSKbxPx7KMUNplBM6Kp4rFqAF41IeQKG7wkNjaoF192bgyVaq2WUysHKSSr6UE4Y4JpSGXfFE3dg-2rs3XcAk7noO7BOYOd5fbX3E8zc7cLuJ5yGVbbkX6v7D--_63fghCjbgwKL_QzHk_G0v6J2l2F8k1OQ2ESQ72YJodx8Yv_u-ZiId-3VTWbYZLHDqpSE0Wh7GbmSrNZXAE4ZdExd-iHw-jMcJ3_wBaOg/p.png?fv_content=true&size_mode=5");
-    image.setAttribute("class", "snake");
+    image.setAttribute("src", "https://i.postimg.cc/L8zy3x7g/SNAKE.png");
+    image.setAttribute("class", "mole");
     hole.appendChild(image);
 
+    
+//     FIX TIMEOUT, GAME IS REPEATING? 02022023
     setTimeout(() => {
       hole.removeChild(image);
     }, 600);
   }, 700);
 
+  //POINTS INCREASE BELOW, USER CLICKS ON TARGET/HOLE...HIT BOX IS SMALL IMAGE WITHIN
   window.addEventListener("click", (e) => {
     if (e.target === hole) score.innerText = ++points;
   });
