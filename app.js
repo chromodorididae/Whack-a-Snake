@@ -33,7 +33,7 @@ const navMenu = document.querySelector(".nav-menu");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+  navMenu.classList.toggle("active");s
 })
 
 
@@ -41,6 +41,13 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }))
+
+
+
+
+
+
+// https://jsfiddle.net/59u4ba0d/ USING JSON
 
 // const holes = document.querySelectorAll('.hole');
 //   const scoreBoard = document.querySelector('.score');
