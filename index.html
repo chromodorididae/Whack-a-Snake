@@ -35,7 +35,7 @@
 
   <h1>You're the new Sheriff<br>Protect the townsfolk from snakes!</br> <span class="score">0</span></h1>
   <br>
-  <button onClick="startGame()">START</button></br>
+  <button "start" onClick="startGame()">START</button></br>
   <div class="game">  
     <div class="hole hole1">
       <div class="mole"></div>
@@ -64,14 +64,6 @@
     <table class="scoretable">
     </table>
   </div>
-
-<div class="cursor">
-  <img src="./revolver.png">
-  <!-- revolver.png -->
-</div>
-
-
-
 <script>
   const holes = document.querySelectorAll('.hole');
   const scoreBoard = document.querySelector('.score');
@@ -81,7 +73,7 @@
   let score = 0;
 
 
-  // Extra feature: high score board!
+  // HIGH SCORE BOARD
   const hiscores = JSON.parse(localStorage.getItem('hiscores')) || [];
   const scoreList = document.querySelector('.scoretable');
 
@@ -89,7 +81,6 @@
   function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
   }
-
 
   function randomHole(holes) {
     const index = Math.floor(Math.random() * holes.length);
@@ -116,7 +107,7 @@
     }, time);
   }
 
-
+  // 10 SECOND GAME TIMER
   function startGame() {
     score = 0;
     scoreBoard.textContent = 0;
@@ -125,9 +116,9 @@
     setTimeout(() => timeUp = true, 10000);
   }
 
-
+  // IF BONKED TWICE
   function bonk(e) {
-    if(!e.isTrusted) return; // cheater!
+    if(!e.isTrusted) return;
     score++;
     this.classList.remove('up');
     scoreBoard.textContent = score;

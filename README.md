@@ -25,3 +25,4 @@ https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860ba
 JSON Tutorial (Parse & Stringify):
 ProgrammingTree
 https://www.youtube.com/watch?v=McfEkDsGfXg
+
