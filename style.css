@@ -19,10 +19,10 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 35pt;
+  font-size: 25pt;
   line-height: 1;
   margin-bottom: 0;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 
@@ -31,13 +31,13 @@ h1 {
   padding: 0 3rem;
   line-height: 1;
   border-radius: 1rem;
-  font-size: 20pt;
+  font-size: 15pt;
 }
 
 
 .game {
-  width: 600px;
-  height: 400px;
+  width: 300px;
+  height: 200px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
