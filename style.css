@@ -19,9 +19,10 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 10rem;
+  font-size: 35pt;
   line-height: 1;
   margin-bottom: 0;
+  padding-top: 50px;
 }
 
 
@@ -30,6 +31,7 @@ h1 {
   padding: 0 3rem;
   line-height: 1;
   border-radius: 1rem;
+  font-size: 20pt;
 }
 
 
@@ -80,8 +82,9 @@ h1 {
 
 button {
   display: block;
-  width: 50px;
+  width: 100px;
   margin: 0 auto;
+  font-size: 12pt;
 }
 
 
@@ -90,6 +93,8 @@ h2 {
   font-size: 20pt;
   line-height: 1;
   margin-bottom: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 h3 {
   text-align: center;
@@ -104,5 +109,163 @@ h3 {
   font-size: 3rem;
   margin: 10px auto;
 }
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+header{
+  background-color: black;
+}
+
+
+li{
+  list-style: none;
+}
+
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+
+.navbar{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+
+}
+
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+
+.nav-title{
+  font-size: 2rem;
+}
+
+
+.nav-link{
+  transition: 0.7s ease;
+  /* HOVER EFFECT */
+}
+
+
+.nav-link:hover{
+  color: red;
+}
+
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+  /* CHANGE TO NONE FOR CUSTOM CURSOR */
+}
+
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  /* top/bottom then left/right */
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: red;
+  /* change to white? */
+}
+
+
+@media(max-width:768px){
+  .hamburger{
+    display: block;
+  }
+
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0px;
+
+
+  }
+
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+  /* DROP DOWN MENU BELOW */
+  .nav-menu{
+    position: fixed;
+    /* menu remains on screen */
+    left: -100%;
+    /* hide from view */
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    /* delay display with transition */
+  }
+
+
+  .nav-item{
+    margin: 16px 0;
+  }
+
+
+  .nav-menu.active{
+    left: 0;
+   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
