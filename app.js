@@ -1,59 +1,149 @@
-const score = document.querySelector(".score span");
-const holes = document.querySelectorAll(".hole");
-const playBtn = document.querySelector(".buttons .play");
-const stopBtn = document.querySelector(".buttons .stop");
-const cursor = document.querySelector(".cursor img");
-
-window.addEventListener("mousemove", (e) => {
-  cursor.style.top = e.pageY + "px";
-  cursor.style.left = e.pageX + "px";
-
-//   ADJUST CURSOR.STYLE.ANIMATION BELOW - 0.1S EASE CURRENTLY
-  
-  window.addEventListener("click", () => {
-    cursor.style.animation = "hit 0.1s ease";
-    setTimeout(() => {
-      cursor.style.removeProperty("animation");
-    }, 100);
-  });
-});
+const hamburger = document.querySelector(".hamburger")
 
 
-//STOP BTN NOT WORKING? ADD
 
-playBtn.addEventListener("click", () => {
-  playBtn.style.display = "none";
-  stopBtn.style.display = "inline-block";
 
-  let hole;
-  let points = 0;
 
-  const 
-  Game = setInterval(() => {
-    let arrayNo = Math.floor(Math.random() * 9);
-    hole = holes[arrayNo];
 
-    let image = document.createElement("img");
-    image.setAttribute("src", "https://i.postimg.cc/L8zy3x7g/SNAKE.png");
-    image.setAttribute("class", "mole");
-    hole.appendChild(image);
 
-    
-//     FIX TIMEOUT, GAME IS REPEATING? 02022023
-    setTimeout(() => {
-      hole.removeChild(image);
-    }, 600);
-  }, 700);
 
-  //POINTS INCREASE BELOW, USER CLICKS ON TARGET/HOLE...HIT BOX IS SMALL IMAGE WITHIN
-  window.addEventListener("click", (e) => {
-    if (e.target === hole) score.innerText = ++points;
-  });
 
-  stopBtn.addEventListener("click", () => {
-    clearInterval(startGame);
-    stopBtn.style.display = "none";
-    playBtn.style.display = "inline-block";
-    score.innerText = 0;
-  });
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // https://www.youtube.com/watch?v=flItyHiDm7E&t=7s
+
+
+
+
+// const holes = document.querySelectorAll('.hole');
+//   const scoreBoard = document.querySelector('.score');
+//   const moles = document.querySelectorAll('.mole');
+//   let lastHole;
+//   let timeUp = false;
+//   let score = 0;
+
+
+//   // Extra feature: high score board!
+//   const hiscores = JSON.parse(localStorage.getItem('hiscores')) || [];
+//   const scoreList = document.querySelector('.scoretable');
+
+
+//   function randomTime(min, max) {
+//     return Math.round(Math.random() * (max - min) + min);
+//   }
+
+
+//   function randomHole(holes) {
+//     const index = Math.floor(Math.random() * holes.length);
+//     const hole = holes[index];
+//     if (hole === lastHole) {
+//       return randomHole(holes);
+//     }
+//     lastHole = hole;
+//     return hole;
+//   }
+
+
+//   function peep() {
+//     const time = randomTime(200, 1000);
+//     const hole = randomHole(holes);
+//     hole.classList.add('up');
+//     setTimeout(() => {
+//       hole.classList.remove('up');
+//       if (!timeUp) {
+//         peep();
+//       } else {
+//         checkScore();
+//       }
+//     }, time);
+//   }
+
+
+//   function startGame() {
+//     score = 0;
+//     scoreBoard.textContent = 0;
+//     timeUp = false;
+//     peep();
+//     setTimeout(() => timeUp = true, 10000);
+//   }
+
+
+//   function bonk(e) {
+//     if(!e.isTrusted) return; // cheater!
+//     score++;
+//     this.classList.remove('up');
+//     scoreBoard.textContent = score;
+//   }
+
+
+//   function populateTable() {
+//     scoreList.innerHTML = hiscores.map((row) => {
+//       return `<tr><td>${row.clicker}</td><td>${row.score}</tr>`;
+//     }).join('');
+//   }
+
+
+//   function checkScore() {
+//     let worstScore = 0;
+//     if (hiscores.length > 4) {
+//       worstScore = hiscores[hiscores.length - 1].score;
+//     }
+
+
+//     if (score > worstScore) {
+//       const clicker = window.prompt(`${score} – Top score! What's your name?`);
+//       hiscores.push({score, clicker});
+//     }
+
+
+//     hiscores.sort((a, b) => a.score > b.score ? -1 : 1);
+
+
+//     // Remove the worst score when table too long
+//     if (hiscores.length > 5) {
+//       hiscores.pop();
+//     }
+
+
+//     populateTable();
+//     localStorage.setItem('hiscores', JSON.stringify(hiscores));
+//   }
+
+
+//   function clearScores() {
+//     hiscores.splice(0, hiscores.length);
+//     localStorage.setItem('hiscores', JSON.stringify(hiscores));
+//     populateTable(hiscores, scoreList);
+//   }
+
+
+//   moles.forEach(mole => mole.addEventListener('click', bonk));
+
+
+//   populateTable();
+
+
+
+
+//DRAFT ABOVE LINES 1-94
