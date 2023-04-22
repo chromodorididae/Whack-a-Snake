@@ -25,6 +25,7 @@ https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860ba
 JSON Tutorial (Parse & Stringify):
 ProgrammingTree
 https://www.youtube.com/watch?v=McfEkDsGfXg
+
 Alligator.io
 https://www.digitalocean.com/community/tutorials/js-json-parse-stringify
 
